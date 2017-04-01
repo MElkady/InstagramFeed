@@ -14,7 +14,7 @@ app.get('/feed', function (req, res) {
 	res.set('Content-Type', 'application/json');
   	request(
 	    { method: 'GET'
-	    , uri: 'https://api.instagram.com/v1/users/google/media/recent/?access_token=' + token
+	    , uri: 'https://api.instagram.com/v1/users/self/media/recent/?access_token=' + token
 	    , gzip: true
 	    }
   	, function (error, response, body) {
